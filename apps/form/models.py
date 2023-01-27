@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+class QuestionModel(models.Model):
+    
+    question = models.CharField(max_length=100, unique=True)
+
+class AnswerModel(models.Model):
+
+    answer = models.CharField(max_length=100)
+    fk_question = models.ForeignKey(QuestionModel, on_delete=models.CASCADE, related_name="answers" )
