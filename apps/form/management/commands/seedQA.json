@@ -1,0 +1,103 @@
+[
+  {
+    "question": "What is your ideal date plan?",
+    "answers": [
+      {
+        "answer": "Go to a cafe for lunch",
+        "role": 1,
+        "feel": 0
+      },
+      {
+        "answer": "Go to the mall and buy things",
+        "role": 0,
+        "feel": 1
+      },
+      {
+        "answer": "Have a cute picnic at the park",
+        "role": 0,
+        "feel": -1
+      },
+      {
+        "answer": "Go to a concert of your favorite artist",
+        "role": -1,
+        "feel": 0
+      }
+    ]
+  },
+  {
+    "question": "What movie genre would you watch with your significant other?",
+    "answers": [
+      {
+        "answer": "Horror",
+        "role": 1,
+        "feel": 0
+      },
+      {
+        "answer": "Comedy",
+        "role": -1,
+        "feel": 0
+      },
+      {
+        "answer": "Romance",
+        "role": 0,
+        "feel": -1
+      },
+      {
+        "answer": "Action",
+        "role": 0,
+        "feel": 1
+      }
+    ]
+  },
+  {
+    "question": "You've just had an argument with your significant other, what are you most likely to do?",
+    "answers": [
+      {
+        "answer": "Remain quiet and leave",
+        "role": 0,
+        "feel": 2
+      },
+      {
+        "answer": "Say that you're sorry and cry",
+        "role": -1,
+        "feel": 0
+      },
+      {
+        "answer": "Try to come to an agreement together",
+        "role": 1,
+        "feel": 0
+      },
+      {
+        "answer": "Makeup by cuddling with each other",
+        "role": 0,
+        "feel": -1
+      }
+    ]
+  },
+
+  {
+    "question": "What flowers would you like to receive from a loved one?",
+    "answers": [
+      {
+        "answer": "Orchards",
+        "role": 0,
+        "feel": -1
+      },
+      {
+        "answer": "Red roses",
+        "role": 1,
+        "feel": 0
+      },
+      {
+        "answer": "Tulip",
+        "role": -1,
+        "feel": 0
+      },
+      {
+        "answer": "Black roses",
+        "role": 0,
+        "feel": -1
+      }
+    ]
+  }
+]

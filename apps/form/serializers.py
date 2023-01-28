@@ -5,7 +5,7 @@ class AnswerSerializer(ModelSerializer):
 
     class Meta:
         model = AnswerModel
-        fields = '__all__'
+        exclude = ['fk_question',]
 
 class QuestionSerializer(ModelSerializer):
 
@@ -13,4 +13,4 @@ class QuestionSerializer(ModelSerializer):
 
     class Meta:
         model = QuestionModel
-        fields = '__all__'
+        fields = ('id','question', 'answers')
