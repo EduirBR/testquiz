@@ -1,0 +1,132 @@
+body {
+  background-color: rgb(218, 213, 213);
+}
+#mainBody{
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#answer{
+  align-content: left;
+}
+h1 {
+  color: rgb(14, 53, 40);
+  text-align: center;
+}
+#contain{
+  text-align: center;
+}
+button{
+  display: block;
+  align-self: center;
+}
+#next{
+  background-color: #51afee; /* Green */
+  border:#666;
+  color: white;
+  padding: 15px 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  font-size: 16px; 
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+#next:active {
+  background-color: #2a89f5;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#start{
+  background-color: #51afee; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; 
+  border-radius: 15px; 
+}
+
+#start:active {
+  background-color: #2a89f5;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#container{
+  max-width: 350px;
+}
+input[type='radio']{
+  margin: 10px;
+}
+input[type="radio"] + label {
+	border-radius: 50px;
+}
+input[type="radio"]:checked + label {
+	background: #c1eec2;
+  border-radius: 15px;
+}
+input[type="radio"] + label{
+	line-height: 3em;
+}
+input[type="radio"] {
+	display: none;
+}
+input[type="radio"] + label:before{
+	content: "";
+	width: 26px;
+	height: 26px;
+	float: left;
+	margin-right: 0.5em;
+	border: 2px solid #ccc;
+	background: #fff;
+	margin-top: 0.5em;
+}
+input[type="radio"]:checked + label {
+	background: #c1eec2;
+}
+input[type="radio"]:checked + label:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 7px solid #0fbf12;
+	float: left;
+	margin-left: -1.85em;
+	margin-top: 1em;
+	border-radius: 100%;
+}
+input[type="radio"]:checked:disabled + label:after {
+	border-color: #ccc;
+}
+input[type="radio"]:checked + label:before {
+	border-color: #0fbf12;
+}
+label {
+	font-weight: 600;
+	color: #777777;
+	margin-bottom: 11px;
+	width: 100%;
+	/* float: left; */
+	cursor: pointer;
+	padding: 0 0.6em;
+	box-sizing: border-box;
+	background: #e6e6e6;
+	transition: all 0.5s ease 0s;
+}
+.yoyo{
+  padding: 2px;
+  background-color: #2a89f5;
+  border-radius: 15px;
+}
+
+#mini ul {
+	margin-top: 0;
+	padding-left: 0em;
+}
+#mini ul li {
+	list-style-type: none;
+}
+#mini ul + ul > li + li label {
+	margin-bottom: 0;
+}
