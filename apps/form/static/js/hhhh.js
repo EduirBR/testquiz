@@ -1,4 +1,3 @@
-console.log("js loaded");
 var js;
 var cont = 0;
 var tfeel = 0;
@@ -32,26 +31,27 @@ function writeQuestion() {
   var question = document.getElementById("question");
   question.innerText = js[cont].question;
   let answers = "";
+  console.log(js[cont].answers.length);
   for (let answer of js[cont].answers) {
-    answers += `
-          <input type="radio" value='{"feel":${answer.feel}, "role":${answer.role}}' name="ans">${answer.answer}<br>
-          `;
+    var answeri = `<li><input type="radio" value='{"feel":${answer.feel}, "role":${answer.role}}' id="anx${answer.id}" name="anx"><label for="anx${answer.id}">${answer.answer}</label><li/>`;
+    answers += answeri;
   }
   var ans = document.getElementById("answer");
-  ans.innerHTML = answers;
+  ans.innerHTML = `<ul>${answers}<ul/>`;
+  console.log(ans.innerHTML);
 }
 
 const buildBoton = () => {
   const boto = document.getElementById("next");
   boto.addEventListener("click", function () {
     try {
-      const check = document.querySelector('input[name="ans"]:checked').value;
+      const check = document.querySelector('input[name="anx"]:checked').value;
       console.log(check);
       FeelRole(check);
       cont++;
       console.log(tfeel, trole);
       if (cont == js.length - 1) {
-        boto.setAttribute("value", "SIMMIT");
+        boto.setAttribute("value", "SUBMIT");
       }
       cont < js.length ? writeQuestion() : result();
     } catch (err) {
@@ -71,5 +71,3 @@ const result = () => {
   <p/>
   `;
 };
-
-const info = () => {};

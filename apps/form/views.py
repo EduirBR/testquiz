@@ -10,9 +10,7 @@ def index(request):
     return render(request,'index.html')
 
 def question(request):
-
-    js = ShowQuestions()
-    print(js)
+    
     return render(request, 'quizz.html')
 
 class QuestionSet(GenericViewSet, CreateModelMixin):
