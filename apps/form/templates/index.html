@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="mainBody">
+    <div>
+        <h1> Welcome to Test your purity</h1>
+        <div>
+            <a href="{% url 'quizz' %}"><button id="startb">Click Here To Start</button></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
