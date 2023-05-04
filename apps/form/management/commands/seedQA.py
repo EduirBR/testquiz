@@ -7,18 +7,20 @@ class Command(BaseCommand):
     help = 'seedQA'
 
     def handle(self, *args, **options):
+        files = QuestionModel.objects.all()
+        if not files:
 
-        file = open('apps/form/management/commands/seedQA.json', encoding="utf8")
-        JSdata = json.load(file)
-    
-        for i in JSdata:
-            print(i['question'])
-            dataq = {
-                'question': i['question']
-            }
-            Qserial = QuestionSerializer(data=dataq)
-            if Qserial.is_valid():
-                Qserial.save()
+            file = open('apps/form/management/commands/seedQA.json', encoding="utf8")
+            JSdata = json.load(file)
+        
+            for i in JSdata:
+                print(i['question'])
+                dataq = {
+                    'question': i['question']
+                }
+                Qserial = QuestionSerializer(data=dataq)
+                if Qserial.is_valid():
+                    Qserial.save()
                 
                 for ans in i['answers']:
 
@@ -31,6 +33,7 @@ class Command(BaseCommand):
                     anSerial = AnswerSerializer(data=dataa)
                     if anSerial.is_valid():
                         anSerial.save()
-                        
+        else:
+            print('Data already Load')                
                           
             
