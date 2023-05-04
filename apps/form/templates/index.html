@@ -2,10 +2,12 @@
 {% load static %}
 
 {% block main %}
-
+{% block title %}
+Welcome
+{% endblock %}
 <div id="mainBody">
     <div>
-        <div id="contain" >
+        <div id="contain">
             <h1> Welcome to The Random Test</h1>
             <a href="{% url 'quizz' %}"><button id="start">Click Here To Start</button></a>
         </div>

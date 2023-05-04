@@ -4,23 +4,25 @@
 {% block script %}
 <script src="{%static 'js/hhhh.js' %}" defer></script>
 {% endblock %}
-
+{% block title %}
+Quizz
+{% endblock %}
 {% block main %}
 <div id="mainBody">
 
     <div id="container">
-      
+
         <h4 id="question"></h4>
 
         <div id="mini">
             <div id="answer">
             </div>
-        </div>        
+        </div>
 
         <div id="contain">
-            <input id="next" type="button" value="NEXT"> 
+            <input id="next" type="button" value="NEXT">
         </div>
-    
+
     </div>
 </div>
 
